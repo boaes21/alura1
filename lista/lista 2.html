@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+letras = [];
+
+for (var i = 0; i < 10; i++) {
+    var letra = prompt("Digite uma letra (ou deixe em branco para encerrar):");
+    
+    if (letra === null || letra === "") {
+        break;
+    }
+    
+    if (letra.length === 1 && letra.match(/[a-zA-Z]/)) {
+        letras.push(letra);
+    } else {
+        alert("Por favor, digite uma única letra.");
+        i--; 
+    }
+}
+console.log("Letras digitadas:", letras.join(", "));
+</script>
+</html>
